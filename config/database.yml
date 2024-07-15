@@ -1,0 +1,14 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: rails
+  password: rails
+
+development:
+  <<: *default
+  database: easy_survey_development
+
+test:
+  <<: *default
+  database: easy_survey_test
